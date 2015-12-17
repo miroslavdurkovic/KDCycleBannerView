@@ -13,7 +13,6 @@
 @interface KDCycleBannerView () <UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) UIScrollView *scrollView;
-@property (assign, nonatomic) BOOL scrollViewBounces;
 
 @property (strong, nonatomic) UIPageControl *pageControl;
 
@@ -86,6 +85,7 @@ static void *kContentImageViewObservationContext = &kContentImageViewObservation
     _scrollView.showsVerticalScrollIndicator = NO;
     _scrollView.autoresizingMask = self.autoresizingMask;
     _scrollView.scrollsToTop = NO;
+    _scrollView.bounces = _scrollViewBounces;
     [self addSubview:_scrollView];
 }
 

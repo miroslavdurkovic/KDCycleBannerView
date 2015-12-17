@@ -40,6 +40,7 @@ typedef void(^CompleteBlock)(void);
 
 @property (assign, nonatomic, getter = isContinuous) BOOL continuous;   // if YES, then bannerview will show like a carousel, default is NO
 @property (assign, nonatomic) NSUInteger autoPlayTimeInterval;  // if autoPlayTimeInterval more than 0, the bannerView will autoplay with autoPlayTimeInterval value space, default is 0
+@property (assign, nonatomic) BOOL scrollViewBounces; // default is YES, set to NO for prevent bouncing
 
 - (void)reloadDataWithCompleteBlock:(CompleteBlock)competeBlock;
 - (void)setCurrentPage:(NSInteger)currentPage animated:(BOOL)animated;
